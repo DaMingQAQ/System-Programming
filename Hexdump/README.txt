@@ -7,9 +7,9 @@
  Note:		README file for instructions
 ***************************************************************/
 
- Files:				            Makefile, README, hexdump.cpp, print.cpp, print.h
+ Files:				Makefile, README, hexdump.cpp, print.cpp, print.h
  Compile Instructions:		Run Makefile
  Operating Instructions:	xsd <filename> or xsd -b <filename>
- Design Decisions:		    Use of C++ istream, getopt, and multiple-file project
- Lessons Learned:		      Multiple-file project, C++ language syntax and library,
- 				                  and Makefile
+ Design Decisions:		Use of C++ istream, getopt, and multiple-file project
+ Lessons Learned:		Multiple-file project, C++ language syntax and library,
+ 				and Makefile

@@ -1,9 +1,9 @@
 /****************************************************************************
 Name:		Luan Nguyen - masc0638
-			Rene Placido - masc0620
-			Christian White - masc0621
+		Rene Placido - masc0620
+		Christian White - masc0621
 Class:		CS530, Spring 2015
-Project:    Assignment 2
+Project:    	Assignment 2
 File:		Disassembler.cpp
 Note:		Main function for reading object file and printing source file
 ****************************************************************************/

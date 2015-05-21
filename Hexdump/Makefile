@@ -1,10 +1,10 @@
 #***************************************************************
-# Name:     		Luan Nguyen
+# Name:     Luan Nguyen
 # username:     masc0638
-# Class:     		CS530, Spring 2015
-# Project:     	Assignment 1
-# File:        	Makefile
-# Note:        	Makefile to compile source files
+# Class:     CS530, Spring 2015
+# Project:     Assignment 1
+# File:        Makefile
+# Note:        Makefile to compile source files
 #****************************************************************
 
 OBJS = hexdump.o print.o

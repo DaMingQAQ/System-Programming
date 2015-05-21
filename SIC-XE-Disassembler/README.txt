@@ -37,7 +37,7 @@ The program structure will look like the following:
 		Populate the internal SYMTAB using .sym file, then load OPTAB.
 		Retrieve and store modification record from file for determining whether operand is constant or an address.
 		Retrieve and store only text record from file for calculating base register.
-Retrieve and store only the instruction code from text record (no starting address and length) for determining EQU symbols.
+		Retrieve and store only the instruction code from text record (no starting address and length) for determining EQU symbols.
 	Send to output stream header record.
 	Send to output stream any EQU symbols.
 	Get one Text Record and loop till there is no more.

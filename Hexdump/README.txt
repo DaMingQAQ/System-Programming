@@ -1,10 +1,10 @@
 /***************************************************************
  Name:      Luan Nguyen
- username: 	masc0638
- Class: 		CS530, Spring 2015
- Project: 	Assignment 1
- File:		  README
- Note:		  README file for instructions
+ username:  masc0638
+ Class:     CS530, Spring 2015
+ Project:   Assignment 1
+ File:      README
+ Note:      README file for assignment 1
 ***************************************************************/
 
  Files:				Makefile, README, hexdump.cpp, print.cpp, print.h

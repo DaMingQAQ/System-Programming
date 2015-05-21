@@ -9,7 +9,8 @@
 ***************************************************************/
 
 Files:			Makefile, README, Disassembler.cpp, Symtab.cpp, Symtab.h, Optab.cpp, Optab.h, 
-			printRec.h, printRec.cpp, calcAddress.h, calcAddress.cpp, converter.h, converter.cpp
+			printRec.h, printRec.cpp, calcAddress.h, calcAddress.cpp, converter.h, 
+			converter.cpp
 Compile Instructions:	Run Makefile
 Operating Instructions:	dasm <filename>.obj
 Design Decisions:	Use of multiple files and standard library

@@ -41,3 +41,32 @@ The program structure will look like the following:
 	Send to output stream header record.
 	Send to output stream any EQU symbols.
 	Get one Text Record and loop till there is no more.
+		If the last text record, then calculate any remaining RESB/W, send to output stream, and skip to end record.
+		Calculate any RESB/W from previous text record and send to output stream.
+		Loop till the end of the current text record.
+			Check current location for a relative symbol.
+				If found then read 1 byte and check if it is the start of RESB/W in mid-text record. If true then determine the length, send to output stream, 
+				and continue to next set of bytes.	
+			Check for any literal at current location.
+				If found then send to output stream and continue to next set of bytes
+			Parse the instruction.
+				Read 1 byte and determine the opcode and format.
+					If format 1.
+						Send instruction to output stream and continue to next set of bytes.
+					If format 2.
+						Parse, get the register, and send instruction to output stream. Then continue to next set of bytes.
+					If format 3.
+						Check flags and determine which addressing mode, then calculate the address and displacement.
+							If cannot determine mode, then it is not instruction and might be a data BYTE or WORD. Move on to data-determining codes.
+							Else look up symbol in SYMTAB, send instruction to output stream, and continue to next set of bytes.
+				If cannot find opcode, parse as data and determine the data at current location. Then send data to output stream and continue to next set of bytes.
+					If cannot find data, there is an error, send to output stream “NULL” and continue to next set of bytes
+				Check format and increment location. Then continue next set of bytes.
+	Send to output stream end record.
+	
+Deficiencies/Bugs:	Program structure can be improved to increase efficiency. Not all instruction and data will be 
+			correct due to ambiguity of disassembling. If such a case occur, “NULL” will be outputted to 
+			the file and the program will continue parsing the records.
+Lessons Learned:	Multiple-file project, C++ language syntax and library, iterator, debugging using try catch 
+			block, and SIC/XE machine features. 
+
